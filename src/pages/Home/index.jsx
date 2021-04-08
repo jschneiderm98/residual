@@ -1,15 +1,15 @@
 /* eslint-disable jsx-a11y/anchor-is-valid */
 import React, { useState } from 'react';
 import './styles.css';
-import logo from '../../assets/black-logo.png';
+import logo from '../../assets/logo.png';
 import rocketIcon from '../../assets/rocket-icon.png';
 import eyeIcon from '../../assets/eye-icon.png';
 import diamondIcon from '../../assets/diamond-icon.png';
 import eHub1 from '../../assets/e-hub-1.png';
 import eHub2 from '../../assets/e-hub-2.png';
 import eHub3 from '../../assets/e-hub-3.png';
-import Books from '../../assets/books.png';
-import Gift from '../../assets/gift.png';
+import books from '../../assets/books.png';
+import gift from '../../assets/gift.png';
 
 export default function Home() {
   const [name, setName] = useState('Nome');
@@ -116,7 +116,7 @@ export default function Home() {
           aprendizado a distância mais proveitoso, refletindo em um processo de ensino
           mais eficiente por meio do nosso ecossistema.
         </p>
-        <img src={Books} alt="Mulher sobre livros" className="Books" />
+        <img src={books} alt="Mulher sobre livros" className="Books" />
       </section>
       <section className="Contribute">
         <h3>Contribua</h3>
@@ -131,7 +131,7 @@ export default function Home() {
           que entraremos em contato com você!
         </p>
         <div className="ContributeFormContainer">
-          <img src={Gift} alt="Pessoa dando presente a outra pessoa" />
+          <img src={gift} alt="Pessoa dando presente a outra pessoa" />
           <form className="ContributeForm" onSubmit={handleSubmit}>
             <input
               type="text"
@@ -158,7 +158,11 @@ export default function Home() {
           </form>
         </div>
       </section>
-      <footer>Educalis</footer>
+      <footer>
+        <img src={logo} alt="Educalis logo" />
+        <div className="Line" />
+        <span>Expandindo as barreiras da educação</span>
+      </footer>
     </div>
   );
 }

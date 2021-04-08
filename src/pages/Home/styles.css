@@ -3,7 +3,7 @@ General page
 ==========================================================================*/
 .Home {
   width: 100%;
-  height: 4628px;
+  height: 4615px;
 }
 
 /*========================================================================
@@ -166,6 +166,12 @@ Quem somos
   height: 250px;
   background-color: var(--project-white);
   border-radius: 10px;
+  box-shadow: 0px 4px 4px -2px rgba(0, 0, 0, 0.25), 0px 2px 5px -1px rgba(0, 0, 0, 0.25) inset;
+}
+
+.Frame:nth-child(2) {
+  margin-left: 100px;
+  margin-right: 100px;
 }
 
 .Frame>img {
@@ -245,6 +251,14 @@ Contribua
   width: 86%;
 }
 
+.Contribute>h3 {
+  margin-bottom: 40px;
+}
+
+.Contribute>p:nth-child(2) {
+  margin-bottom: 30px;
+}
+
 .ContributeFormContainer {
   display: flex;
   flex-direction: row;
@@ -254,6 +268,12 @@ Contribua
 .ContributeFormContainer>img {
   width: 50%;
   height: auto;
+  margin-top: 50px;
+  margin-right: 10px;
+}
+
+.ContributeFormContainer>form {
+  margin-left: 50px;
 }
 
 .ContributeForm {
@@ -277,6 +297,8 @@ Contribua
 
 .ContributeForm>input {
   padding-left: 20px;
+  box-shadow: 0px 4px 4px -2px rgba(0, 0, 0, 0.25), 0px 2px 5px -1px rgba(0, 0, 0, 0.25);
+
 }
 
 .ContributeForm>input::placeholder {
@@ -300,4 +322,35 @@ Contribua
   border: none;
   color: var(--project-white);
   margin-top: 40px;
+}
+
+/*========================================================================
+Footer
+==========================================================================*/
+
+.Home>footer {
+  background-color: var(--very-light-blue);
+  height: 300px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+}
+
+.Home>footer>img {
+  height: 122px;
+  width: auto;
+  margin-right: 35px;
+}
+
+.Home>footer>span {
+  margin-left: 35px;
+  font-size: 20px;
+  color: #191919;
+}
+
+.Line {
+  height: 65%;
+  width: 1px;
+  border: 1px solid var(--project-black);
 }
