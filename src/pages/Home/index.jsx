@@ -104,9 +104,9 @@ export default function Home() {
           por qualquer pessoa com um smartphone ou computador.
         </p>
         <div className="EHub">
-          <img src={eHub1} alt="Foto E-Hub 1" />
-          <img src={eHub2} alt="Foto E-Hub 2" />
-          <img src={eHub3} alt="Foto E-Hub 3" />
+          <div><img src={eHub1} alt="Foto E-Hub 1" /></div>
+          <div><img src={eHub2} alt="Foto E-Hub 2" /></div>
+          <div><img src={eHub3} alt="Foto E-Hub 3" /></div>
         </div>
         <p className="NormalText">
           A usabilidade é simples, basta que o aluno acesse a rede Wi-Fi gerada pelo
