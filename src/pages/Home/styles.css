@@ -1,0 +1,356 @@
+/*========================================================================
+General page 
+==========================================================================*/
+.Home {
+  width: 100%;
+  height: 4615px;
+}
+
+/*========================================================================
+Section titles
+==========================================================================*/
+
+.WWAContainer>h3,
+.Structure>h3,
+.Contribute>h3 {
+  font-weight: 400;
+  font-size: 49px;
+  color: var(--darkest-blue);
+}
+
+/*========================================================================
+Simple text
+==========================================================================*/
+
+.NormalText {
+  font-weight: 400;
+  font-size: 21px;
+  color: var(--cinza-medio);
+}
+
+/*========================================================================
+Header 
+==========================================================================*/
+
+.Home>header {
+  width: 100%;
+  height: 200px;
+  display: flex;
+  justify-content: space-between;
+  flex-direction: row;
+  align-items: center;
+}
+
+.Itens-Menu {
+  margin-right: 10px;
+}
+
+.Logo {
+  height: 122px;
+  width: auto;
+  margin-left: 7.1%;
+}
+
+.Item {
+  text-decoration: none;
+  color: black;
+  font-size: 20px;
+  font-weight: 500;
+  margin-right: 20px;
+}
+
+.Item:nth-child(5) {
+  display: inline-block;
+  height: 40px;
+  width: 140px;
+  background-color: var(--primary-blue);
+  text-align: center;
+  line-height: 40px;
+  border-radius: 10px;
+  color: var(--project-white);
+  box-shadow: 0 4px 5px 0 rgba(0, 66, 87, 0.3);
+}
+
+/*========================================================================
+Landing
+==========================================================================*/
+
+.Landing {
+  width: 100%;
+  height: 680px;
+  background-image: url(../../assets/study.png);
+  background-repeat: no-repeat;
+  background-position: bottom right;
+}
+
+.Landing>* {
+  margin-left: 100px;
+}
+
+.educacao {
+  display: flex;
+  flex-direction: row;
+}
+
+.Landing>h2,
+.educacao>h2 {
+  font-weight: 400;
+  font-size: 66px;
+}
+
+.educacao>h2 {
+  line-height: 120px;
+}
+
+.educacao>h1 {
+  font-weight: 400;
+  font-size: 88px;
+  color: var(--dark-blue);
+}
+
+.Landing>p {
+  width: 400px;
+  margin-top: 50px;
+}
+
+/*========================================================================
+Quem somos
+==========================================================================*/
+
+.WhoWeAre {
+  width: 100%;
+  height: 870px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.WWAContainer {
+  width: 93.75%;
+  border-radius: 20px;
+  background-color: var(--very-light-blue);
+  height: 100%;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+}
+
+.WWAContainer>* {
+  width: 91.55%;
+  /* border: 1px solid black; */
+}
+
+.WWAContainer>h3 {
+  margin-top: 8%;
+  margin-bottom: 50px;
+}
+
+.WWAContainer>p {
+  margin-top: 20px;
+}
+
+.Frames {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  margin-top: 70px;
+}
+
+.Frame {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  align-items: center;
+  text-align: center;
+  width: 250px;
+  height: 250px;
+  background-color: var(--project-white);
+  border-radius: 10px;
+  box-shadow: 0px 4px 4px -2px rgba(0, 0, 0, 0.25), 0px 2px 5px -1px rgba(0, 0, 0, 0.25) inset;
+}
+
+.Frame:nth-child(2) {
+  margin-left: 100px;
+  margin-right: 100px;
+}
+
+.Frame>img {
+  width: 35px;
+  height: 35px;
+}
+
+.Frames>.Frame:nth-child(2)>img {
+  height: 23.33px;
+}
+
+.Frames>.Frame:nth-child(3)>img {
+  height: 31.11px;
+}
+
+.Frame h5 {
+  color: var(--primary-red);
+  font-size: 27px;
+}
+
+.Frame span {
+  font-size: 15px;
+  font-weight: normal;
+  color: var(--project-black);
+  width: 200px;
+}
+
+/*========================================================================
+Estrutura
+==========================================================================*/
+
+.Structure {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  height: 1600px;
+}
+
+.Structure>* {
+  width: 86%;
+}
+
+.Structure>h3 {
+  margin-top: 70px;
+}
+
+.Structure>p:nth-child(2) {
+  margin-top: 60px;
+  margin-bottom: 75px;
+}
+
+.EHub {
+  width: 100%;
+  display: flex;
+  justify-content: space-evenly;
+  margin-bottom: 120px;
+}
+
+.Books {
+  height: 540px;
+  width: auto;
+  margin-top: 50px;
+}
+
+/*========================================================================
+Contribua
+==========================================================================*/
+
+.Contribute {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  height: 966px;
+}
+
+.Contribute>* {
+  width: 86%;
+}
+
+.Contribute>h3 {
+  margin-bottom: 40px;
+}
+
+.Contribute>p:nth-child(2) {
+  margin-bottom: 30px;
+}
+
+.ContributeFormContainer {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
+.ContributeFormContainer>img {
+  width: 50%;
+  height: auto;
+  margin-top: 50px;
+  margin-right: 10px;
+}
+
+.ContributeFormContainer>form {
+  margin-left: 50px;
+}
+
+.ContributeForm {
+  width: 50%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.ContributeForm>input,
+.ContributeForm>button {
+  width: 500px;
+  height: 70px;
+  border: 1px solid var(--project-black);
+  border-radius: 10px;
+  font-size: 20px;
+  font-weight: 400;
+  color: var(--project-black);
+}
+
+.ContributeForm>input {
+  padding-left: 20px;
+  box-shadow: 0px 4px 4px -2px rgba(0, 0, 0, 0.25), 0px 2px 5px -1px rgba(0, 0, 0, 0.25);
+
+}
+
+.ContributeForm>input::placeholder {
+  color: var(--project-black);
+  opacity: 1;
+  font-weight: 300;
+}
+
+.ContributeForm>input:nth-child(n + 1) {
+  margin-top: 50px;
+}
+
+.ContributeForm>input:nth-child(3) {
+  height: 140px;
+  padding-bottom: 70px;
+}
+
+.ContributeForm>button {
+  border-radius: 20px;
+  background-color: var(--primary-red);
+  border: none;
+  color: var(--project-white);
+  margin-top: 40px;
+}
+
+/*========================================================================
+Footer
+==========================================================================*/
+
+.Home>footer {
+  background-color: var(--very-light-blue);
+  height: 300px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+}
+
+.Home>footer>img {
+  height: 122px;
+  width: auto;
+  margin-right: 35px;
+}
+
+.Home>footer>span {
+  margin-left: 35px;
+  font-size: 20px;
+  color: #191919;
+}
+
+.Line {
+  height: 65%;
+  width: 1px;
+  border: 1px solid var(--project-black);
+}
