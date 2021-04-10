@@ -241,12 +241,12 @@ Estrutura
 
 .EHub>div>img {
   width: 432px;
-  height: 310px;
+  height: auto;
 }
 
 .EHub>div:first-child>img {
   width: 300px;
-  height: 315px;
+  height: auto;
 }
 
 .Books {
@@ -304,7 +304,8 @@ Contribua
 }
 
 .ContributeForm>input,
-.ContributeForm>button {
+.ContributeForm>button,
+.ContributeForm>div {
   width: 500px;
   height: 70px;
   border: 1px solid var(--project-black);
@@ -314,10 +315,10 @@ Contribua
   color: var(--project-black);
 }
 
-.ContributeForm>input {
+.ContributeForm>input,
+.ContributeForm>div {
   padding-left: 20px;
   box-shadow: 0px 4px 4px -2px rgba(0, 0, 0, 0.25), 0px 2px 5px -1px rgba(0, 0, 0, 0.25);
-
 }
 
 .ContributeForm>input::placeholder {
@@ -326,13 +327,17 @@ Contribua
   font-weight: 300;
 }
 
-.ContributeForm>input:nth-child(n + 1) {
+.ContributeForm>input:nth-child(n + 1),
+.ContributeForm>div {
   margin-top: 50px;
 }
 
-.ContributeForm>input:nth-child(3) {
+.ContributeForm>div {
   height: 140px;
-  padding-bottom: 70px;
+  padding-top: 20px;
+  padding-right: 20px;
+  overflow-wrap: break-word;
+  background-color: var(--project-white);
 }
 
 .ContributeForm>button {
@@ -444,4 +449,124 @@ Media Queries
     min-width: 200px;
     align-items: center;
   }
+}
+
+@media screen and (max-width: 720px) {
+
+  /*========================================================================
+  Titles
+  ==========================================================================*/
+
+  .WWAContainer>h3,
+  .Structure>h3,
+  .Contribute>h3 {
+    font-size: 35px;
+  }
+
+  /*========================================================================
+  Header 
+  ==========================================================================*/
+
+
+  /*========================================================================
+  Landing
+  ==========================================================================*/
+
+  .Landing {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    height: 380px;
+  }
+
+  .Landing>* {
+    margin: 0;
+  }
+
+  .Landing>h2,
+  .educacao>h2 {
+    font-weight: 400;
+    font-size: 6vw;
+  }
+
+  .educacao>h2 {
+    line-height: 11vw;
+    margin-right: 7px;
+  }
+
+  .educacao>h1 {
+    font-size: 8vw;
+  }
+
+  .Landing>p {
+    width: 80%;
+  }
+
+  /*========================================================================
+  Quem somos
+  ==========================================================================*/
+
+  .WWAContainer>* {
+    width: 80%;
+    /* border: 1px solid black; */
+  }
+
+  /*========================================================================
+Estrutura
+==========================================================================*/
+
+  .EHub>div>img {
+    width: 300px;
+    height: auto;
+  }
+
+  .Structure>img {
+    display: none;
+  }
+
+  /*========================================================================
+  Contribua
+  ==========================================================================*/
+
+  .Contribute {
+    margin-top: 30px;
+    height: auto;
+    margin-bottom: 50px;
+  }
+
+  .ContributeForm>input,
+  .ContributeForm>div,
+  .ContributeForm>button {
+    width: 80%;
+  }
+
+  /*========================================================================
+  Footer
+  ==========================================================================*/
+
+  .Home>footer {
+    height: 150px;
+    display: block;
+  }
+
+  .Home>footer>img {
+    position: relative;
+    left: 50%;
+    transform: translateX(-50%);
+    margin: 0;
+    width: 50%;
+    height: auto;
+    min-width: 250px;
+    margin-top: 40px;
+  }
+
+  .Line {
+    display: none;
+  }
+
+  .Home>footer>span {
+    display: none;
+  }
+
 }

@@ -13,11 +13,11 @@ import gift from '../../assets/gift.png';
 
 export default function Home() {
   const [name, setName] = useState('Nome');
-  /* const [local, setLocal] = useState('');
-  const [contribution, setContribution] = useState(''); */
+  const [local, setLocal] = useState('');
+  const [contribution, setContribution] = useState('Digite aqui como você gostaria de contribuir');
 
   const handleSubmit = (e) => {
-    alert(`Um nome foi enviado: ${name}`);
+    alert(`Um nome foi enviado: ${name}, ${local}`);
     e.preventDefault();
   };
 
@@ -144,16 +144,23 @@ export default function Home() {
               type="text"
               placeholder="Cidade/Estado"
               onChange={(e) => {
-                setName(e.target.value);
+                setLocal(e.target.value);
               }}
             />
-            <input
-              type="text"
-              placeholder="Digite aqui como você gostaria de contribuir"
+            <div
+              contentEditable
+              tabIndex={0}
+              onKeyPress={() => {}}
+              onClick={() => {
+                document.execCommand('selectAll', false, null);
+              }}
+              role="textbox"
               onChange={(e) => {
-                setName(e.target.value);
+                setContribution(e.target.value);
               }}
-            />
+            >
+              {contribution}
+            </div>
             <button type="submit">Enviar</button>
           </form>
         </div>
