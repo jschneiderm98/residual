@@ -1,6 +1,7 @@
 /* eslint-disable jsx-a11y/anchor-is-valid */
 import React, { useState } from 'react';
-import './styles.css';
+import { Link } from 'react-router-dom';
+
 import logo from '../../assets/logo.png';
 import rocketIcon from '../../assets/rocket-icon.png';
 import eyeIcon from '../../assets/eye-icon.png';
@@ -10,6 +11,8 @@ import eHub2 from '../../assets/e-hub-2.png';
 import eHub3 from '../../assets/e-hub-3.png';
 import books from '../../assets/books.png';
 import gift from '../../assets/gift.png';
+
+import './styles.css';
 
 export default function Home() {
   const [name, setName] = useState('Nome');
@@ -26,14 +29,14 @@ export default function Home() {
       <header>
         <img src={logo} alt="Educalis Logo" className="Logo" />
         <div className="Itens-Menu">
-          <a href="" className="Item">Inicio</a>
-          <a href="" className="Item">Quem somos</a>
-          <a href="" className="Item">Estrutura</a>
-          <a href="" className="Item">Contribua</a>
-          <a href="" className="Item">Login</a>
+          <a href="/#Landing" className="Item">Inicio</a>
+          <a href="/#WhoWeAre" className="Item">Quem somos</a>
+          <a href="/#Structure" className="Item">Estrutura</a>
+          <a href="/#Contribute" className="Item">Contribua</a>
+          <Link to="/login" className="Item">Login</Link>
         </div>
       </header>
-      <section className="Landing">
+      <section className="Landing" id="Landing">
         <h2>Expandindo as fronteiras</h2>
         <div className="educacao">
           <h2>da</h2>
@@ -47,7 +50,7 @@ export default function Home() {
           ou sem acesso a internet!
         </p>
       </section>
-      <section className="WhoWeAre">
+      <section className="WhoWeAre" id="WhoWeAre">
         <div className="WWAContainer">
           <h3>Quem somos</h3>
           <p className="NormalText">
@@ -93,7 +96,7 @@ export default function Home() {
           </div>
         </div>
       </section>
-      <section className="Structure">
+      <section className="Structure" id="Structure">
         <h3>Estrutura</h3>
         <p className="NormalText">
           O fator chave para a funcionalidade do projeto é a infraestrutura
@@ -118,7 +121,7 @@ export default function Home() {
         </p>
         <img src={books} alt="Mulher sobre livros" className="Books" />
       </section>
-      <section className="Contribute">
+      <section className="Contribute" id="Contribute">
         <h3>Contribua</h3>
         <p className="NormalText">
           Quer ajudar a Educalis a chegar nos mais de 6 milhões de estudantes
