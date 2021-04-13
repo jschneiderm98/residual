@@ -38,7 +38,7 @@ export default function Home() {
           />
           <button type="submit">Entrar</button>
           <div className="LoginLinks">
-            <Link to="/">Criar conta</Link>
+            <Link to="/cadastro">Criar conta</Link>
             <Link to="/">Esqueceu sua senha</Link>
           </div>
         </form>

@@ -1,0 +1,73 @@
+.Signup {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  background-color: var(--very-lighest-red);
+  min-height: 100vh;
+}
+
+.Signup>img {
+  position: fixed;
+  width: 50%;
+  height: auto;
+  top: 5%;
+  left: 8%;
+}
+
+.Signup>div:first-child {
+  flex: 1;
+  height: 100%;
+}
+
+.SignupContainer {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: var(--project-white);
+}
+
+.SignupContainer img {
+  margin-top: 5%;
+  width: 55.55%;
+  height: auto;
+  margin-bottom: 5%;
+}
+
+.SignupContainer>form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+}
+
+.SignupContainer form input,
+.SignupContainer form button {
+  width: 58%;
+  height: 65px;
+  border-radius: 20px;
+  border: 1px solid var(--project-black);
+  padding: 20px;
+  font-size: 20px;
+  font-weight: 300;
+}
+
+.SignupContainer form input,
+.errorField {
+  margin-top: 4%;
+}
+
+.SignupContainer form button {
+  margin-top: 8%;
+  border: none;
+  background-color: var(--primary-red);
+  font-weight: 500;
+  color: white;
+  transition: 0.3s;
+  margin-bottom: 8%;
+}
+
+.SignupContainer form button:hover {
+  background-color: var(--very-light-red);
+  color: white;
+}
