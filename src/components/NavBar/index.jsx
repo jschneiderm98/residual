@@ -1,4 +1,4 @@
-import React, { useEffect } from 'react';
+import React from 'react';
 import { Link, useLocation } from 'react-router-dom';
 import { ReactComponent as CalendarIcon } from '../../assets/calendarIcon.svg';
 import { ReactComponent as BookIcon } from '../../assets/bookIcon.svg';
@@ -14,14 +14,12 @@ const comp = (path, check) => ((path === check) ? 'Selected' : null);
 
 export default function NavBar({ children }) {
   const location = useLocation();
-  useEffect(() => {
-    console.log(location);
-  }, [location]);
+
   return (
     <div className="NavBackground">
       <div className="NavBar">
         <img src={logo} alt="Educalis logo" />
-        <Link to="/" className={comp(location.pathname, '/dashboard')}>
+        <Link to="/dashboard" className={comp(location.pathname, '/dashboard')}>
           <UserIcon />
           <span>Disciplinas</span>
         </Link>
