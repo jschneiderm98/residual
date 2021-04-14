@@ -1,19 +1,19 @@
 import React, { useState } from 'react';
-import { Link } from 'react-router-dom';
+import { Link, withRouter } from 'react-router-dom';
 
 import logo from '../../assets/logo.png';
 import test from '../../assets/test.png';
 
 import './styles.css';
 
-export default function Home() {
+function Login({ history }) {
   const [matricula, setMatricula] = useState('');
   const [senha, setSenha] = useState('');
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    localStorage.setItem('matricula', matricula);
-    localStorage.setItem('senha', senha);
+    localStorage.setItem('loggedMatricula', matricula);
+    localStorage.setItem('loggedSenha', senha);
   };
 
   return (
@@ -36,10 +36,10 @@ export default function Home() {
             (e) => setSenha(e.target.value)
           }
           />
-          <button type="submit">Entrar</button>
+          <button type="submit" onClick={() => history.push('/dashboard')}>Entrar</button>
           <div className="LoginLinks">
             <Link to="/cadastro">Criar conta</Link>
-            <Link to="/">Esqueceu sua senha</Link>
+            <Link to="/recover">Esqueceu sua senha</Link>
           </div>
         </form>
       </div>
@@ -47,3 +47,5 @@ export default function Home() {
     </div>
   );
 }
+
+export default withRouter(Login);

@@ -16,8 +16,8 @@ export const SignupSchema = Yup.object().shape({
     .string()
     .min(6, 'A senha deve ter pelo menos 6 dígitos')
     .required('É necessário criar uma senha'),
-  matricula: Yup.string().required(),
-  nome: Yup.string().required(),
+  matricula: Yup.string().required('É necessário indicar um matrícula'),
+  nome: Yup.string().required('É necessário indicar o nome da escola'),
 });
 
 export const handleSubmit = async (values, setSubmitting, history) => {

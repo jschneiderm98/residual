@@ -16,7 +16,8 @@ body {
   font-family: 'Montserrat', sans-serif;
   --project-white: #fafafa;
   --project-black: #141414;
-  --very-light-blue: rgb(207, 224, 229);
+  --very-lightest-blue: rgb(207, 224, 229);
+  --lightest-blue: rgb(177, 211, 222);
   --primary-blue: rgb(0, 152, 199);
   --dark-blue: rgb(0, 129, 168);
   --darkest-blue: rgb(0, 66, 87);

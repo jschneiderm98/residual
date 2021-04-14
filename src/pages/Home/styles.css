@@ -133,7 +133,7 @@ Quem somos
 .WWAContainer {
   width: 93.75%;
   border-radius: 20px;
-  background-color: var(--very-light-blue);
+  background-color: var(--very-lightest-blue);
   height: 100%;
   display: flex;
   align-items: center;
@@ -359,7 +359,7 @@ Footer
 ==========================================================================*/
 
 .Home>footer {
-  background-color: var(--very-light-blue);
+  background-color: var(--very-lightest-blue);
   height: 300px;
   display: flex;
   flex-direction: row;
