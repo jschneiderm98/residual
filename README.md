@@ -31,5 +31,5 @@ Um calendário funcional que possa mostrar dados recebidos da API da aplicação
 
 ## Recomendações de implementação
 
-Uma página que detalha as informações do professor
-Uma página que detalha as informações de uma nota específica do boletim
+* Uma página que detalha as informações do professor
+* Uma página que detalha as informações de uma nota específica do boletim
