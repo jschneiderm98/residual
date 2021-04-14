@@ -1,6 +1,7 @@
 /* eslint-disable jsx-a11y/anchor-is-valid */
 import React, { useState } from 'react';
-import './styles.css';
+import { Link } from 'react-router-dom';
+
 import logo from '../../assets/logo.png';
 import rocketIcon from '../../assets/rocket-icon.png';
 import eyeIcon from '../../assets/eye-icon.png';
@@ -11,13 +12,15 @@ import eHub3 from '../../assets/e-hub-3.png';
 import books from '../../assets/books.png';
 import gift from '../../assets/gift.png';
 
+import './styles.css';
+
 export default function Home() {
   const [name, setName] = useState('Nome');
-  /* const [local, setLocal] = useState('');
-  const [contribution, setContribution] = useState(''); */
+  const [local, setLocal] = useState('');
+  const [contribution, setContribution] = useState('Digite aqui como você gostaria de contribuir');
 
   const handleSubmit = (e) => {
-    alert(`Um nome foi enviado: ${name}`);
+    alert(`Um nome foi enviado: ${name}, ${local}`);
     e.preventDefault();
   };
 
@@ -26,14 +29,14 @@ export default function Home() {
       <header>
         <img src={logo} alt="Educalis Logo" className="Logo" />
         <div className="Itens-Menu">
-          <a href="" className="Item">Inicio</a>
-          <a href="" className="Item">Quem somos</a>
-          <a href="" className="Item">Estrutura</a>
-          <a href="" className="Item">Contribua</a>
-          <a href="" className="Item">Login</a>
+          <a href="/#Landing" className="Item">Inicio</a>
+          <a href="/#WhoWeAre" className="Item">Quem somos</a>
+          <a href="/#Structure" className="Item">Estrutura</a>
+          <a href="/#Contribute" className="Item">Contribua</a>
+          <Link to="/login" className="Item">Login</Link>
         </div>
       </header>
-      <section className="Landing">
+      <section className="Landing" id="Landing">
         <h2>Expandindo as fronteiras</h2>
         <div className="educacao">
           <h2>da</h2>
@@ -47,7 +50,7 @@ export default function Home() {
           ou sem acesso a internet!
         </p>
       </section>
-      <section className="WhoWeAre">
+      <section className="WhoWeAre" id="WhoWeAre">
         <div className="WWAContainer">
           <h3>Quem somos</h3>
           <p className="NormalText">
@@ -93,7 +96,7 @@ export default function Home() {
           </div>
         </div>
       </section>
-      <section className="Structure">
+      <section className="Structure" id="Structure">
         <h3>Estrutura</h3>
         <p className="NormalText">
           O fator chave para a funcionalidade do projeto é a infraestrutura
@@ -104,9 +107,9 @@ export default function Home() {
           por qualquer pessoa com um smartphone ou computador.
         </p>
         <div className="EHub">
-          <img src={eHub1} alt="Foto E-Hub 1" />
-          <img src={eHub2} alt="Foto E-Hub 2" />
-          <img src={eHub3} alt="Foto E-Hub 3" />
+          <div><img src={eHub1} alt="Foto E-Hub 1" /></div>
+          <div><img src={eHub2} alt="Foto E-Hub 2" /></div>
+          <div><img src={eHub3} alt="Foto E-Hub 3" /></div>
         </div>
         <p className="NormalText">
           A usabilidade é simples, basta que o aluno acesse a rede Wi-Fi gerada pelo
@@ -118,7 +121,7 @@ export default function Home() {
         </p>
         <img src={books} alt="Mulher sobre livros" className="Books" />
       </section>
-      <section className="Contribute">
+      <section className="Contribute" id="Contribute">
         <h3>Contribua</h3>
         <p className="NormalText">
           Quer ajudar a Educalis a chegar nos mais de 6 milhões de estudantes
@@ -144,16 +147,23 @@ export default function Home() {
               type="text"
               placeholder="Cidade/Estado"
               onChange={(e) => {
-                setName(e.target.value);
+                setLocal(e.target.value);
               }}
             />
-            <input
-              type="text"
-              placeholder="Digite aqui como você gostaria de contribuir"
+            <div
+              contentEditable
+              tabIndex={0}
+              onKeyPress={() => {}}
+              onClick={() => {
+                document.execCommand('selectAll', false, null);
+              }}
+              role="textbox"
               onChange={(e) => {
-                setName(e.target.value);
+                setContribution(e.target.value);
               }}
-            />
+            >
+              {contribution}
+            </div>
             <button type="submit">Enviar</button>
           </form>
         </div>

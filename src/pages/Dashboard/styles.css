@@ -1,0 +1,44 @@
+.Dashboard {
+  margin-left: 40px;
+}
+
+.SubjectsTitle {
+  font-size: 40px;
+  font-weight: 400;
+  margin-bottom: 50px;
+}
+
+.SubjectsScroll {
+  display: flex;
+  flex-direction: row;
+  overflow-x: hidden;
+  margin-right: 50px;
+  border-radius: 20px;
+}
+
+.SubjectsScroll:hover {
+  overflow-x: scroll;
+}
+
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+.Subject {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-right: 80px;
+  text-decoration: none;
+}
+
+.SubjectImage {
+  width: 220px;
+  height: 220px;
+  border-radius: 10px;
+}
+
+.Subject>span {
+  font-size: 20px;
+  color: var(--project-black);
+}

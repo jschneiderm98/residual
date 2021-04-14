@@ -3,8 +3,13 @@ General page
 ==========================================================================*/
 .Home {
   width: 100%;
-  height: 4615px;
 }
+
+/*========================================================================
+Scroll Setting
+==========================================================================*/
+
+
 
 /*========================================================================
 Section titles
@@ -46,8 +51,8 @@ Header
 }
 
 .Logo {
-  height: 122px;
-  width: auto;
+  height: auto;
+  width: 28%;
   margin-left: 7.1%;
 }
 
@@ -79,6 +84,7 @@ Landing
   width: 100%;
   height: 680px;
   background-image: url(../../assets/study.png);
+  background-size: 55% auto;
   background-repeat: no-repeat;
   background-position: bottom right;
 }
@@ -118,8 +124,7 @@ Quem somos
 ==========================================================================*/
 
 .WhoWeAre {
-  width: 100%;
-  height: 870px;
+  width: calc(100% + 20px);
   display: flex;
   justify-content: center;
   align-items: center;
@@ -128,7 +133,7 @@ Quem somos
 .WWAContainer {
   width: 93.75%;
   border-radius: 20px;
-  background-color: var(--very-light-blue);
+  background-color: var(--very-lightest-blue);
   height: 100%;
   display: flex;
   align-items: center;
@@ -152,11 +157,15 @@ Quem somos
 .Frames {
   display: flex;
   flex-direction: row;
-  justify-content: space-evenly;
   margin-top: 70px;
+  gap: 50px;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin-bottom: 75px;
 }
 
 .Frame {
+  flex: 0 1 20%;
   display: flex;
   flex-direction: column;
   justify-content: space-evenly;
@@ -169,10 +178,6 @@ Quem somos
   box-shadow: 0px 4px 4px -2px rgba(0, 0, 0, 0.25), 0px 2px 5px -1px rgba(0, 0, 0, 0.25) inset;
 }
 
-.Frame:nth-child(2) {
-  margin-left: 100px;
-  margin-right: 100px;
-}
 
 .Frame>img {
   width: 35px;
@@ -207,7 +212,6 @@ Estrutura
   display: flex;
   flex-direction: column;
   align-items: center;
-  height: 1600px;
 }
 
 .Structure>* {
@@ -224,10 +228,31 @@ Estrutura
 }
 
 .EHub {
-  width: 100%;
-  display: flex;
-  justify-content: space-evenly;
+  width: 93.75%;
   margin-bottom: 120px;
+  display: flex;
+  gap: 50px;
+  flex-wrap: wrap;
+}
+
+.EHub>* {
+  flex: 1 1 15%;
+}
+
+.EHub>div {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+}
+
+.EHub>div>img {
+  width: 432px;
+  height: auto;
+}
+
+.EHub>div:first-child>img {
+  width: 300px;
+  height: auto;
 }
 
 .Books {
@@ -285,7 +310,8 @@ Contribua
 }
 
 .ContributeForm>input,
-.ContributeForm>button {
+.ContributeForm>button,
+.ContributeForm>div {
   width: 500px;
   height: 70px;
   border: 1px solid var(--project-black);
@@ -295,10 +321,10 @@ Contribua
   color: var(--project-black);
 }
 
-.ContributeForm>input {
+.ContributeForm>input,
+.ContributeForm>div {
   padding-left: 20px;
   box-shadow: 0px 4px 4px -2px rgba(0, 0, 0, 0.25), 0px 2px 5px -1px rgba(0, 0, 0, 0.25);
-
 }
 
 .ContributeForm>input::placeholder {
@@ -307,13 +333,17 @@ Contribua
   font-weight: 300;
 }
 
-.ContributeForm>input:nth-child(n + 1) {
+.ContributeForm>input:nth-child(n + 1),
+.ContributeForm>div {
   margin-top: 50px;
 }
 
-.ContributeForm>input:nth-child(3) {
+.ContributeForm>div {
   height: 140px;
-  padding-bottom: 70px;
+  padding-top: 20px;
+  padding-right: 20px;
+  overflow-wrap: break-word;
+  background-color: var(--project-white);
 }
 
 .ContributeForm>button {
@@ -329,7 +359,7 @@ Footer
 ==========================================================================*/
 
 .Home>footer {
-  background-color: var(--very-light-blue);
+  background-color: var(--very-lightest-blue);
   height: 300px;
   display: flex;
   flex-direction: row;
@@ -353,4 +383,196 @@ Footer
   height: 65%;
   width: 1px;
   border: 1px solid var(--project-black);
+}
+
+/*========================================================================
+Media Queries
+==========================================================================*/
+
+@media screen and (max-width: 1024px) {
+
+  /*========================================================================
+  Header 
+  ==========================================================================*/
+
+  .Home {
+    display: block;
+  }
+
+  .Itens-Menu {
+    display: none;
+  }
+
+  .Logo {
+    position: relative;
+    left: 50%;
+    transform: translateX(-50%);
+    margin: 0;
+    width: 50%;
+    min-width: 200px;
+  }
+
+  /*========================================================================
+  Landing
+  ==========================================================================*/
+
+  .Landing {
+    background-image: none;
+  }
+
+  /*========================================================================
+  Quem somos
+  ==========================================================================*/
+
+  .WWAContainer {
+    width: 100%;
+    border-radius: 0px;
+  }
+
+  /*========================================================================
+  Contribua
+  ==========================================================================*/
+
+  .Contribute>.ContributeFormContainer {
+    width: 100%;
+  }
+
+  .ContributeFormContainer>img {
+    display: none;
+    width: 100%;
+  }
+
+  .ContributeFormContainer>form {
+    margin: 0;
+  }
+
+
+  .ContributeForm {
+    position: relative;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 100%;
+    min-width: 200px;
+    align-items: center;
+  }
+}
+
+@media screen and (max-width: 720px) {
+
+  /*========================================================================
+  Titles
+  ==========================================================================*/
+
+  .WWAContainer>h3,
+  .Structure>h3,
+  .Contribute>h3 {
+    font-size: 35px;
+  }
+
+  /*========================================================================
+  Header 
+  ==========================================================================*/
+
+
+  /*========================================================================
+  Landing
+  ==========================================================================*/
+
+  .Landing {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    height: 380px;
+  }
+
+  .Landing>* {
+    margin: 0;
+  }
+
+  .Landing>h2,
+  .educacao>h2 {
+    font-weight: 400;
+    font-size: 6vw;
+  }
+
+  .educacao>h2 {
+    line-height: 11vw;
+    margin-right: 7px;
+  }
+
+  .educacao>h1 {
+    font-size: 8vw;
+  }
+
+  .Landing>p {
+    width: 80%;
+  }
+
+  /*========================================================================
+  Quem somos
+  ==========================================================================*/
+
+  .WWAContainer>* {
+    width: 80%;
+    /* border: 1px solid black; */
+  }
+
+  /*========================================================================
+Estrutura
+==========================================================================*/
+
+  .EHub>div>img {
+    width: 300px;
+    height: auto;
+  }
+
+  .Structure>img {
+    display: none;
+  }
+
+  /*========================================================================
+  Contribua
+  ==========================================================================*/
+
+  .Contribute {
+    margin-top: 30px;
+    height: auto;
+    margin-bottom: 50px;
+  }
+
+  .ContributeForm>input,
+  .ContributeForm>div,
+  .ContributeForm>button {
+    width: 80%;
+  }
+
+  /*========================================================================
+  Footer
+  ==========================================================================*/
+
+  .Home>footer {
+    height: 150px;
+    display: block;
+  }
+
+  .Home>footer>img {
+    position: relative;
+    left: 50%;
+    transform: translateX(-50%);
+    margin: 0;
+    width: 50%;
+    height: auto;
+    min-width: 250px;
+    margin-top: 40px;
+  }
+
+  .Line {
+    display: none;
+  }
+
+  .Home>footer>span {
+    display: none;
+  }
+
 }

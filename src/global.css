@@ -7,15 +7,22 @@
   box-sizing: border-box;
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
 body {
   background-color: var(--project-white);
   font-family: 'Montserrat', sans-serif;
   --project-white: #fafafa;
   --project-black: #141414;
-  --very-light-blue: rgb(207, 224, 229);
+  --very-lightest-blue: rgb(207, 224, 229);
+  --lightest-blue: rgb(177, 211, 222);
   --primary-blue: rgb(0, 152, 199);
   --dark-blue: rgb(0, 129, 168);
   --darkest-blue: rgb(0, 66, 87);
+  --very-lighest-red: rgb(245, 220, 220);
+  --very-light-red: rgb(231, 92, 92);
   --primary-red: rgb(231, 14, 14);
   --cinza-medio: rgb(51, 51, 51);
 }
