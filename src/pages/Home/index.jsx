@@ -20,6 +20,7 @@ export default function Home() {
   const [contribution, setContribution] = useState('Digite aqui como você gostaria de contribuir');
 
   const handleSubmit = (e) => {
+    // eslint-disable-next-line no-alert
     alert(`Um nome foi enviado: ${name}, ${local}`);
     e.preventDefault();
   };
