@@ -1,0 +1,26 @@
+.TopicPage>* {
+  margin-left: 43px;
+  margin-right: 43px;
+}
+
+.TopicTitle {
+  font-weight: 400;
+  font-size: 40px;
+  margin-bottom: 40px;
+}
+
+.TopicImageContainer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.TopicImageContainer>span {
+  margin-bottom: 60px;
+  font-size: 15px;
+}
+
+.TopicPage>p {
+  margin-bottom: 30px;
+}

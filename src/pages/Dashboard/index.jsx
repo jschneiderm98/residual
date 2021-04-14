@@ -1,5 +1,5 @@
 import React from 'react';
-// import { Link } from 'react-router-dom';
+import { Link } from 'react-router-dom';
 
 import NavBar from '../../components/NavBar';
 import { ReactComponent as Geography } from '../../assets/geografia.svg';
@@ -27,10 +27,10 @@ export default function Dashboard() {
         <h2 className="SubjectsTitle">Escolha a displina</h2>
         <div className="SubjectsScroll">
           {subject.map((item) => (
-            <div className="Subject">
+            <Link to="/subject" className="Subject">
               <item.component className="SubjectImage" />
               <span>{item.name}</span>
-            </div>
+            </Link>
           ))}
         </div>
       </div>

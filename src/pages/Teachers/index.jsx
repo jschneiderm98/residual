@@ -12,6 +12,7 @@ import { ReactComponent as TeacherIcon } from '../../assets/teacher.svg';
 import './styles.css';
 
 export default function Teachers() {
+  // no projeto real isso seria um useState e acessaria a api para obter os dados
   const teachers = [
     { name: 'Juliana Ainb', image: Photo1, subject: 'MATEMÁTICA' },
     { name: 'Maria Eugenia', image: Photo2, subject: 'MATEMÁTICA' },

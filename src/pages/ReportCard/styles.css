@@ -1,0 +1,72 @@
+.GradesPage {
+  margin-left: 40px;
+}
+
+.GradesTitle {
+  font-size: 40px;
+  font-weight: 400;
+  margin-bottom: 50px;
+}
+
+.GradesScroll {
+  display: flex;
+  flex-direction: row;
+  overflow-x: hidden;
+  margin-right: 50px;
+  border-radius: 20px;
+}
+
+.GradesScroll:hover {
+  overflow-x: scroll;
+}
+
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+
+.Grade {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-evenly;
+  margin-top: 25px;
+  width: 250px;
+  height: 250px;
+  box-shadow: 0px 4px 4px -2px rgba(0, 0, 0, 0.25), 0px 2px 5px -1px rgba(0, 0, 0, 0.25) inset;
+  border-radius: 10px;
+  flex-shrink: 0;
+  margin-right: 30px;
+}
+
+.Grade>* {
+  margin-top: 5px;
+}
+
+.GradeImage {
+  width: 100px;
+  height: 100px;
+}
+
+.Grade>p {
+  font-size: 24px;
+  font-weight: 500;
+}
+
+.GradeValue {
+  display: flex;
+}
+
+.GradeValue>span {
+  display: flex;
+  align-items: center;
+  font-size: 18px;
+  margin-left: 10px;
+  color: var(--darkest-blue);
+}
+
+.GradeValue>svg {
+  width: 35px;
+  height: 35px;
+  fill: var(--darkest-blue);
+}

@@ -6,6 +6,10 @@ import Signup from '../pages/Signup';
 import Recover from '../pages/PasswordRecover';
 import Dashboard from '../pages/Dashboard';
 import Teachers from '../pages/Teachers';
+import Subject from '../pages/Subject';
+import Topic from '../pages/Topic';
+import CalendarPage from '../pages/Calendar';
+import ReportCard from '../pages/ReportCard';
 
 const DefaultRoutes = () => (
   <BrowserRouter>
@@ -16,6 +20,10 @@ const DefaultRoutes = () => (
       <Route exact path="/recover" component={Recover} />
       <Route exact path="/dashboard" component={Dashboard} />
       <Route exact path="/teachers" component={Teachers} />
+      <Route exact path="/subject" component={Subject} />
+      <Route exact path="/topic" component={Topic} />
+      <Route exact path="/calendar" component={CalendarPage} />
+      <Route exact path="/reportcard" component={ReportCard} />
     </Switch>
   </BrowserRouter>
 );
