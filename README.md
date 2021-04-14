@@ -27,4 +27,9 @@ A maior parte da aplicação foi desenvolvida, todas as páginas estão ao menos
 
 ## Funcionalidades não desenvolvidas
 
-Um calendário funcional que possa mostrar dados recebidos da API da aplicação. Responsivida existe apenas na página Home. Alguns formulários não possuem validação.
+Um calendário funcional que possa mostrar dados recebidos da API da aplicação. Responsividade existe apenas na página Home. Alguns formulários não possuem validação.
+
+## Recomendações de implementação
+
+Uma página que detalha as informações do professor
+Uma página que detalha as informações de uma nota específica do boletim
