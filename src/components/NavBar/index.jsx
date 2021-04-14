@@ -34,7 +34,7 @@ export default function NavBar({ children }) {
       </div>
       <div className="Content">
         <div className="Icons">
-          <Link to="/">
+          <Link to="/teachers">
             <TeacherIcon />
             <span>Professores</span>
           </Link>
